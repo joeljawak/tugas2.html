@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #929093, #54f154);
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      color: white;
+      text-align: center;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    form {
+      background: #fff;
+      padding: 25px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #1dee71;
+      box-shadow: 0 0 8px rgba(0, 140, 40, 0.5);
+      outline: none;
+    }
+
+    .radio-group,
+    .checkbox-group {
+      display: flex;
+      gap: 15px;
+      margin-top: 5px;
+    }
+
+    .checkbox-group label,
+    .radio-group label {
+      font-weight: normal;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    input[type="submit"] {
+      background: #a8a9a9;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: transform 0.2s, background 0.3s;
+      display: block;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background: #6a11cb;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>Form Universitas Sumatera Utara</h2>
+
+  <form action="#" method="post">
+
+
+    <img src="logo usu untuk semua (1).png" width="50x" height="50px">
+
+    <!-- Input text -->
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+
+    <!-- Input password -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+
+    <!-- Textarea -->
+    <label for="alamat">Alamat:</label>
+    <textarea id="alamat" name="alamat" rows="4" placeholder="Tulis alamat lengkap" required></textarea>
+
+    <!-- Radio button -->
+    <label>Jenis Kelamin:</label>
+    <div class="radio-group">
+      <label><input type="radio" id="pria" name="gender" value="pria" required> Pria</label>
+      <label><input type="radio" id="wanita" name="gender" value="wanita"> Wanita</label>
+    </div>
+
+    <!-- Checkbox -->
+    <label>Hobi:</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" id="membaca" name="hobi[]" value="membaca"> Membaca</label>
+      <label><input type="checkbox" id="olahraga" name="hobi[]" value="olahraga"> Olahraga</label>
+      <label><input type="checkbox" id="musik" name="hobi[]" value="musik"> Musik</label>
+    </div>
+
+    <!-- Select option -->
+    <label for="jurusan">Jurusan:</label>
+    <select id="jurusan" name="jurusan" required>
+      <option value="">-- Pilih Jurusan --</option>
+      <option value="informatika">Ilmu Komputer(S1)</option>
+      <option value="sistem-informasi">Teknologi Informasi(S1)</option>
+      <option value="elektro">Teknik informatika (D3)</option>
+      <option value="mesin">Teknik Mesin (S1)</option>
+    </select>
+
+    <!-- Submit button -->
+    <input type="submit" value="Kirim">
+  </form>
+</body>
+</html>
